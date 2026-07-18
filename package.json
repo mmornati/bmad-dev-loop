@@ -19,7 +19,7 @@
     "install:local": "node bin/bmad-dev-loop.js install",
     "uninstall:local": "node bin/bmad-dev-loop.js uninstall",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs && node scripts/build-llms.js",
     "docs:preview": "vitepress preview docs",
     "lint:skill": "node bin/bmad-dev-loop.js validate",
     "test": "node --test tests/"

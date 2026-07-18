@@ -34,6 +34,8 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/bmad-dev-loop/favicon.svg' }],
   ],
 
+  vite: {},
+
   markdown: {
     theme: {
       light: 'github-light',
