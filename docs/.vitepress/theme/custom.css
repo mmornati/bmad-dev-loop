@@ -1,0 +1,66 @@
+/* bmad-dev-loop custom theme tokens */
+
+:root {
+  --vp-c-brand-1: #00d4ff;
+  --vp-c-brand-2: #00b3e6;
+  --vp-c-brand-3: #0091bf;
+  --vp-c-brand-soft: rgba(0, 212, 255, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #00d4ff 30%, #7c5cff 70%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #00d4ff 0%, #7c5cff 100%);
+  --vp-home-hero-image-filter: blur(80px);
+}
+
+.dark {
+  --vp-c-bg: #0b1020;
+  --vp-c-bg-alt: #11172e;
+  --vp-c-bg-elv: #161d3a;
+  --vp-c-text-1: #e6ecff;
+  --vp-c-text-2: #aeb8d9;
+  --vp-c-text-3: #8090b8;
+  --vp-c-divider: #2a325a;
+  --vp-c-gutter: #161d3a;
+}
+
+/* Hero typography */
+.VPHero .name,
+.VPHero .text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.VPHero .name {
+  background-image: linear-gradient(120deg, #00d4ff 30%, #7c5cff 70%);
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Make code blocks feel like the CLI */
+.vp-doc div[class*='language-'] {
+  border-radius: 10px;
+}
+
+/* Custom callouts */
+.bmad-callout {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  margin: 1.2rem 0;
+}
+
+.bmad-callout strong {
+  color: var(--vp-c-brand-1);
+}
+
+/* Pipeline phase table zebra */
+.vp-doc table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Hide VitePress default hero image noise */
+.VPHero .image-bg {
+  opacity: 0.5;
+}

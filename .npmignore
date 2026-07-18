@@ -1,0 +1,11 @@
+# Files NOT shipped to npm (the install script + docs ship instead)
+node_modules/
+docs/
+.github/
+.gitignore
+.gitattributes
+tests/
+*.log
+.DS_Store
+.vitepress/
+coverage/

@@ -1,0 +1,75 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'docs/.vitepress/**'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  deployments: write
+
+concurrency:
+  group: docs-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Create GitHub Deployment
+        uses: chrnorm/deployment-action@v2
+        with:
+          environment-url: https://mmornati.github.io/bmad-dev-loop/
+          description: Deploy documentation to GitHub Pages
+          environment: github-pages
+          ref: ${{ github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+        id: deployment
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build documentation
+        run: pnpm docs:build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Update Deployment Status
+        uses: chrnorm/deployment-status@v2
+        with:
+          environment-url: https://mmornati.github.io/bmad-dev-loop/
+          state: ${{ job.status }}
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
+          token: ${{ secrets.GITHUB_TOKEN }}

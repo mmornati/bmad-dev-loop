@@ -1,0 +1,58 @@
+{
+  "name": "bmad-dev-loop",
+  "version": "0.1.0",
+  "description": "Standalone BMAD dev-loop skill — automated multi-story delivery orchestrator (dev → review → PR → CI → merge).",
+  "type": "module",
+  "main": "./scripts/install.js",
+  "bin": {
+    "bmad-dev-loop": "./bin/bmad-dev-loop.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate": "node bin/bmad-dev-loop.js validate",
+    "install:local": "node bin/bmad-dev-loop.js install",
+    "uninstall:local": "node bin/bmad-dev-loop.js uninstall",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "lint:skill": "node bin/bmad-dev-loop.js validate",
+    "test": "node --test tests/"
+  },
+  "keywords": [
+    "bmad",
+    "bmad-loop",
+    "bmad-dev-loop",
+    "skill",
+    "agent",
+    "opencode",
+    "claude",
+    "github",
+    "automation",
+    "delivery",
+    "pr",
+    "ci"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Massimo Mornati <mmornati@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmornati/bmad-dev-loop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmornati/bmad-dev-loop/issues"
+  },
+  "homepage": "https://mmornati.github.io/bmad-dev-loop/",
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}

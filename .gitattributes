@@ -1,0 +1,33 @@
+# Auto-detect text files, enforce LF
+*                 text=auto eol=lf
+
+# Source code
+*.js              text eol=lf
+*.mjs             text eol=lf
+*.cjs             text eol=lf
+*.ts              text eol=lf
+*.vue             text eol=lf
+*.md              text eol=lf
+*.yaml            text eol=lf
+*.yml             text eol=lf
+*.toml            text eol=lf
+*.json            text eol=lf
+
+# Shell / build
+*.sh              text eol=lf
+Makefile          text eol=lf
+Dockerfile        text eol=lf
+
+# Binaries
+*.png             binary
+*.jpg             binary
+*.jpeg            binary
+*.gif             binary
+*.ico             binary
+*.svg             binary
+*.webp            binary
+
+# Lockfiles
+package-lock.json binary
+pnpm-lock.yaml    binary
+yarn.lock         binary
