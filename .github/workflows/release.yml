@@ -30,7 +30,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Validate skill
         run: node bin/bmad-dev-loop.js validate

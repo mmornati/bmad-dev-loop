@@ -68,7 +68,7 @@ jobs:
       - name: Check internal markdown links
         run: |
           node -e "
-          const { readdirSync, readFileSync, statSync } = require('node:fs');
+          const { readdirSync, readFileSync, statSync, existsSync } = require('node:fs');
           const { join } = require('node:path');
           const ROOT = 'docs';
           const mdFiles = [];
@@ -81,17 +81,21 @@ jobs:
             }
           })(ROOT);
           const linkRe = /\\]\\((?!https?:|#|mailto:)([^)]+)\\)/g;
+          const fileExists = (rel) => {
+            const stripped = rel.split('#')[0].split(' ')[0];
+            if (!stripped) return true;
+            const candidates = [join(ROOT, stripped), join(ROOT, stripped + '.md'), join(ROOT, stripped, 'index.md')];
+            return candidates.some((p) => existsSync(p));
+          };
           let broken = 0;
           for (const f of mdFiles) {
             const text = readFileSync(f, 'utf8');
             for (const m of text.matchAll(linkRe)) {
-              const link = m[1].split('#')[0].split(' ')[0];
-              if (!link) continue;
-              if (link.startsWith('/')) {
-                if (!existsSync('docs' + link)) {
-                  console.error('BROKEN', f, '->', link);
-                  broken++;
-                }
+              const link = m[1];
+              if (!link.startsWith('/')) continue;
+              if (!fileExists(link)) {
+                console.error('BROKEN', f, '->', link);
+                broken++;
               }
             }
           }
