@@ -24,7 +24,7 @@ README.md            # this file
 
 ```bash
 # From the project root
-npx bmad-dev-loop install
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 
 # Or copy this folder manually
 cp -R skills/bmad-dev-loop /your/project/.opencode/skills/

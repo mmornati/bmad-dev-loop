@@ -5,7 +5,7 @@ The `bmad-dev-loop` CLI is the install/uninstall/validate surface for the skill.
 ## Synopsis
 
 ```bash
-npx bmad-dev-loop <subcommand> [options]
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js <subcommand> [options]
 ```
 
 ## Subcommands
@@ -15,7 +15,7 @@ npx bmad-dev-loop <subcommand> [options]
 Copy `skills/bmad-dev-loop/` into the target's skill folder.
 
 ```bash
-npx bmad-dev-loop install [--scope <project|global>] [--target DIR]
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install [--scope <project|global>] [--target DIR]
 ```
 
 | Flag | Default | Description |
@@ -35,7 +35,7 @@ Behavior:
 Reverse of `install`.
 
 ```bash
-npx bmad-dev-loop uninstall [--scope <project|global>] [--target DIR]
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js uninstall [--scope <project|global>] [--target DIR]
 ```
 
 Same flags as `install`. If the target does not exist, the command exits `0` with a "nothing to remove" message.
@@ -45,7 +45,7 @@ Same flags as `install`. If the target does not exist, the command exits `0` wit
 Run structural checks on the source skill in this package.
 
 ```bash
-npx bmad-dev-loop validate
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate
 ```
 
 Checks:
@@ -90,17 +90,17 @@ console.log('installed to', dest);
 
 ```bash
 # Install into the current project
-npx bmad-dev-loop install
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 
 # Install globally
-npx bmad-dev-loop install --scope global
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --scope global
 
 # Install into a specific directory
-npx bmad-dev-loop install --target ./work/.opencode/skills
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --target ./work/.opencode/skills
 
 # Uninstall
-npx bmad-dev-loop uninstall
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js uninstall
 
 # Validate the source package
-npx bmad-dev-loop validate
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate
 ```

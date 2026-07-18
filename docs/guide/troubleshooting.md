@@ -2,12 +2,12 @@
 
 Common problems and how to debug them.
 
-## `validation failed: ...` on `npx bmad-dev-loop validate`
+## `validation failed: ...` on `node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate`
 
 The validator checks the skill structure. Run it locally and read the output:
 
 ```bash
-npx bmad-dev-loop validate
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate
 ```
 
 Failures are usually one of:

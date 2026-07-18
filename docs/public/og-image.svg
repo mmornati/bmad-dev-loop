@@ -49,5 +49,5 @@
   </g>
 
   <!-- Footer -->
-  <text x="80" y="580" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#7c8bbd">npx bmad-dev-loop install   ·   github.com/mmornati/bmad-dev-loop</text>
+  <text x="80" y="580" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#7c8bbd">git clone github.com/mmornati/bmad-dev-loop   ·   node bin/bmad-dev-loop.js install</text>
 </svg>

@@ -14,7 +14,7 @@ assignees: ''
 
 ```
 <!-- Commands to reproduce, ideally a minimal sequence. -->
-npx bmad-dev-loop install
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 /bmad-dev-loop 4-1
 ...
 ```
@@ -32,7 +32,7 @@ npx bmad-dev-loop install
 - OS:
 - Node version (`node --version`):
 - OpenCode version (if applicable):
-- Skill version (`npx bmad-dev-loop --version`):
+- Skill version (`node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js --version`):
 
 ## Attachments
 

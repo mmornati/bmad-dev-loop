@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'bmad-dev-loop',
   titleTemplate: ':title — bmad-dev-loop',
   description:
-    'Automated multi-story delivery orchestrator: dev → review → PR → CI → merge. An OpenCode / Claude skill, installable via npx.',
+    'Automated multi-story delivery orchestrator: dev → review → PR → CI → merge. An OpenCode / Claude skill, installable from source.',
   cleanUrls: true,
   lastUpdated: true,
   appearance: 'dark',

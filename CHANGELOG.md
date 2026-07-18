@@ -8,7 +8,7 @@ All notable changes to this project are documented here. Format follows [Keep a 
 
 - VitePress documentation site with hero, guides, reference, and examples.
 - Sample input (`sample-sprint-status.yaml`) and sample output (`sample-loop-status.yaml`) bundled with the skill.
-- `npx bmad-dev-loop` CLI with `install`, `uninstall`, and `validate` subcommands.
+- `node bin/bmad-dev-loop.js` CLI with `install`, `uninstall`, and `validate` subcommands (run from a local clone — not published to npm).
 - GitHub Pages deploy workflow and CI workflow.
 
 ## [0.1.0] — 2026-07-18

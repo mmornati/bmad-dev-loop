@@ -19,7 +19,7 @@ All three should report healthy versions. The `gh auth status` line should show 
 From the project where you want to use it:
 
 ```bash
-npx bmad-dev-loop install
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 ```
 
 Expected output:

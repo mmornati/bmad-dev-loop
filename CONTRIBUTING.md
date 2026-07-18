@@ -7,7 +7,7 @@ Thanks for your interest in `bmad-dev-loop`. This is a small, dependency-free pr
 1. Fork the repository.
 2. Create a branch: `git checkout -b feat/your-change`.
 3. Make your changes. **Skill edits go under `skills/bmad-dev-loop/`** — that folder is the source of truth; the docs site renders from there.
-4. Validate locally: `npx bmad-dev-loop validate`.
+4. Validate locally: `node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate`.
 5. Build the docs site locally: `pnpm install && pnpm docs:build`.
 6. Open a PR. The CI workflow will run `validate` and a markdown-link check.
 7. After review, a maintainer will tag a release.

@@ -23,7 +23,7 @@ The state machine was first delivered as the **`bmad-loop`** skill inside the [l
 | `dry_run` mode | Preview a run without doing anything |
 | Resume semantics documented | Re-runs pick up at first non-`merged` story |
 | Sample input + sample output shipped | See [Examples](/examples/sample-sprint) |
-| `npx bmad-dev-loop install` | Zero-friction installation |
+| `node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install` | Zero-friction installation |
 
 ## Design principles
 

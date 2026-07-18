@@ -14,11 +14,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/bmad-dev-loop"><img src="https://img.shields.io/npm/v/bmad-dev-loop?label=npm&color=00d4ff" alt="npm"></a>
-  <img src="https://img.shields.io/badge/skills-opencode%20%7C%20claude-00d4ff?logo=opencode" alt="skills">
-  <a href="https://github.com/mmornati/bmad-dev-loop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   <a href="https://mmornati.github.io/bmad-dev-loop/"><img src="https://img.shields.io/badge/docs-vitepress-7c5cff?logo=vitepress" alt="Docs"></a>
   <a href="https://github.com/mmornati/bmad-dev-loop/actions"><img src="https://img.shields.io/badge/CI-passing-00d4ff?logo=githubactions" alt="CI"></a>
+  <img src="https://img.shields.io/badge/skills-opencode%20%7C%20claude-00d4ff?logo=opencode" alt="skills">
 </p>
 
 <p align="center">
@@ -72,7 +71,8 @@ flowchart LR
 
 ```bash
 # One line — into your current project
-npx bmad-dev-loop install
+git clone https://github.com/mmornati/bmad-dev-loop.git /tmp/bmad-dev-loop
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 ```
 
 That's it. The CLI copies `skills/bmad-dev-loop/` from the package into `./.opencode/skills/bmad-dev-loop/` in your project. Run it from your repo root.
@@ -81,23 +81,23 @@ Other flavors:
 
 ```bash
 # Globally (every project you open)
-npx bmad-dev-loop install --scope global
+git clone https://github.com/mmornati/bmad-dev-loop.git /tmp/bmad-dev-loop
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --scope global
 
 # To a custom directory
-npx bmad-dev-loop install --target ./my-project/.opencode/skills
-
-# As an npm dev dependency
-npm install --save-dev bmad-dev-loop
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --target ./my-project/.opencode/skills
 
 # Or just copy by hand
 git clone https://github.com/mmornati/bmad-dev-loop.git
 cp -R bmad-dev-loop/skills/bmad-dev-loop /your/project/.opencode/skills/
 ```
 
+> The package is a skill, not an npm library. `package.json` exists for CLI metadata and local scripts, not for registry publishing. Install from source.
+
 Validate the install:
 
 ```bash
-npx bmad-dev-loop validate
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate
 # validation passed.
 ```
 

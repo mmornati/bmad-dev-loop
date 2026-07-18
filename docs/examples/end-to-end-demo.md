@@ -5,7 +5,7 @@ A walkthrough of running the loop on the sample data, with the chat-style output
 ## Setup
 
 ```bash
-$ npx bmad-dev-loop install
+$ node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 installed bmad-dev-loop to ./.opencode/skills/bmad-dev-loop
 scope:   project
 invoke:  /bmad-dev-loop <story-keys>

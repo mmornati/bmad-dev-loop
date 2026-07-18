@@ -31,11 +31,11 @@ function readPackageVersion() {
 }
 
 const HELP = `Usage:
-  npx bmad-dev-loop install [--target DIR] [--scope <project|global>]
-  npx bmad-dev-loop uninstall [--target DIR] [--scope <project|global>]
-  npx bmad-dev-loop validate
-  npx bmad-dev-loop --version
-  npx bmad-dev-loop --help
+  node bin/bmad-dev-loop.js install [--target DIR] [--scope <project|global>]
+  node bin/bmad-dev-loop.js uninstall [--target DIR] [--scope <project|global>]
+  node bin/bmad-dev-loop.js validate
+  node bin/bmad-dev-loop.js --version
+  node bin/bmad-dev-loop.js --help
 
 Subcommands:
   install       Copy skills/bmad-dev-loop into the target's skill folder.

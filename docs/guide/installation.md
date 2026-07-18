@@ -2,10 +2,11 @@
 
 Pick the path that fits how you use the skill.
 
-## One-line install (recommended)
+## From a local clone (recommended)
 
 ```bash
-npx bmad-dev-loop install
+git clone https://github.com/mmornati/bmad-dev-loop.git /tmp/bmad-dev-loop
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install
 ```
 
 This copies `skills/bmad-dev-loop/` from the package into `./.opencode/skills/bmad-dev-loop/` in the current directory. Run it from the project root where you want the skill available.
@@ -13,7 +14,7 @@ This copies `skills/bmad-dev-loop/` from the package into `./.opencode/skills/bm
 To install globally instead (so it's available in every project):
 
 ```bash
-npx bmad-dev-loop install --scope global
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --scope global
 ```
 
 This targets `~/.config/opencode/skills/bmad-dev-loop/`.
@@ -21,41 +22,26 @@ This targets `~/.config/opencode/skills/bmad-dev-loop/`.
 To install into a custom directory:
 
 ```bash
-npx bmad-dev-loop install --target ./my-project/.opencode/skills
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js install --target ./my-project/.opencode/skills
 ```
 
 ## Manual copy
 
-If you prefer not to use `npx`:
+If you prefer not to use the CLI at all:
 
 ```bash
 git clone https://github.com/mmornati/bmad-dev-loop.git
 cp -R bmad-dev-loop/skills/bmad-dev-loop /your/project/.opencode/skills/
 ```
 
-## As an npm dependency
-
-```bash
-npm install --save-dev bmad-dev-loop
-```
-
-Then in your `package.json`:
-
-```json
-{
-  "scripts": {
-    "bmad-dev-loop:install": "bmad-dev-loop install",
-    "bmad-dev-loop:validate": "bmad-dev-loop validate"
-  }
-}
-```
+> **Why no `npm install`?** This project is a skill, not a library. `package.json` exists for CLI metadata (version, scripts, entry points) — not for registry publishing. Install from source.
 
 ## Verify
 
 Run the structural validator on the source package to confirm everything is in order:
 
 ```bash
-npx bmad-dev-loop validate
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js validate
 ```
 
 You should see `validation passed.`
@@ -78,13 +64,13 @@ The `install` command targets `./.opencode/skills/` by default. After copying, y
 ## Uninstall
 
 ```bash
-npx bmad-dev-loop uninstall
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js uninstall
 ```
 
 Or:
 
 ```bash
-npx bmad-dev-loop uninstall --scope global
+node /tmp/bmad-dev-loop/bin/bmad-dev-loop.js uninstall --scope global
 ```
 
 ## Requirements
