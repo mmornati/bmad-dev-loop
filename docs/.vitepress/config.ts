@@ -5,6 +5,7 @@ export default defineConfig({
   titleTemplate: ':title — bmad-dev-loop',
   description:
     'Automated multi-story delivery orchestrator: dev → review → PR → CI → merge. An OpenCode / Claude skill, installable from source.',
+  base: '/bmad-dev-loop/',
   cleanUrls: true,
   lastUpdated: true,
   appearance: 'dark',
@@ -19,7 +20,7 @@ export default defineConfig({
         content: 'Automated multi-story delivery orchestrator for coding agents.',
       },
     ],
-    ['meta', { name: 'og:image', content: '/og-image.svg' }],
+    ['meta', { name: 'og:image', content: '/bmad-dev-loop/og-image.svg' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'bmad-dev-loop' }],
     [
@@ -29,8 +30,8 @@ export default defineConfig({
         content: 'Automated multi-story delivery orchestrator for coding agents.',
       },
     ],
-    ['meta', { name: 'twitter:image', content: '/og-image.svg' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['meta', { name: 'twitter:image', content: '/bmad-dev-loop/og-image.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/bmad-dev-loop/favicon.svg' }],
   ],
 
   markdown: {
