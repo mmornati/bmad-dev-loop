@@ -234,4 +234,4 @@ Originally delivered as **`bmad-loop`** in [leanproxy-mcp#245](https://github.co
 
 ## License
 
-MIT © 2026 [Massimo Mornati](https://github.com/mmornati)
+MIT © 2026 [Marco Mornati](https://github.com/mmornati)

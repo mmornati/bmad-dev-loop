@@ -42,7 +42,7 @@
     "node": ">=18"
   },
   "license": "MIT",
-  "author": "Massimo Mornati <mmornati@users.noreply.github.com>",
+  "author": "Marco Mornati <mmornati@users.noreply.github.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmornati/bmad-dev-loop.git"

@@ -82,4 +82,4 @@ This is the standalone, hardened, distributable version — same state machine, 
 
 ## License
 
-MIT. © 2026 [Massimo Mornati](https://github.com/mmornati).
+MIT. © 2026 [Marco Mornati](https://github.com/mmornati).

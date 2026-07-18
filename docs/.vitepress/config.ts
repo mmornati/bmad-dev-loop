@@ -114,7 +114,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026 Massimo Mornati',
+      copyright: 'Copyright © 2026 Marco Mornati',
     },
 
     editLink: {
