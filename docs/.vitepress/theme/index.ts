@@ -41,24 +41,23 @@ export default {
     const renderMermaid = async () => {
       const mermaid = await getMermaid();
       init(mermaid);
-      const blocks = document.querySelectorAll(
-        '.vp-doc pre code.language-mermaid',
+      const wrappers = document.querySelectorAll(
+        '.vp-doc div.language-mermaid',
       );
       const targets = [];
-      blocks.forEach((code) => {
-        const pre = code.parentElement;
-        if (!pre) return;
+      wrappers.forEach((wrapper) => {
+        const source = wrapper.querySelector('code')?.textContent ?? '';
+        if (!source.trim()) return;
         const container = document.createElement('div');
         container.className = 'mermaid';
-        container.textContent = code.textContent;
-        pre.replaceWith(container);
+        container.textContent = source;
+        wrapper.replaceWith(container);
         targets.push(container);
       });
       if (targets.length === 0) return;
       try {
         await mermaid.run({ nodes: targets });
       } catch (e) {
-        // Reset classes so re-attempt works on theme toggle.
         targets.forEach((el) => el.removeAttribute('data-processed'));
         console.error('mermaid render failed', e);
       }
